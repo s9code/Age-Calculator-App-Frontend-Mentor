@@ -1,0 +1,241 @@
+ /* Variables */
+
+ :root {
+	--type-font: 'Poppins', sans-serif;
+	--sice-normal: 400;
+	--sice-bold: 700;
+	--sice-strong: 800;
+ }
+
+ /* Reset CSS*/
+ 
+ * {
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+
+/* General*/
+ }
+
+ .year, 
+ .month,
+ .days  {
+	color : hsl(259, 100%, 65%);
+	padding-right: 20px;
+ }
+ 
+ html {
+    font-family: var(--type-font);
+	background-color: hsl(0, 0%, 86%);
+ }
+
+ @media only screen and (max-width: 500px){
+
+	/* Main Container */
+	
+	.container-main {
+		margin: 80px 15px 0 15px;
+		background-color: hsl(0, 0%, 100%);
+		border-radius: 20px 20px 100px 20px;
+	}
+
+	/* Date Container */
+
+	.section-date {
+		padding: 40px 15px 60px 15px;
+		display: flex;
+		flex-direction: row;
+		justify-content:space-around;
+		/* mantenerlo dentro del container */
+		flex-wrap: wrap;
+	 }
+
+	 .error-day, .error-month, .error-year{
+		color: red;
+		font-style: italic;
+		font-size: 10px;
+		margin-top: 5px;
+	 }
+
+	 .section-text {
+		font-size: 12px;
+		padding-bottom: 5px;
+		color: hsl(0, 1%, 44%);
+		font-weight: var(--sice-strong);
+	}
+
+	.input {
+		border: 1px solid hsl(0, 0%, 86%); 
+		border-radius: 10%;
+		width: 75px;
+		padding: 14px 0 14px 14px;
+		font-size: 20px;
+		font-weight: var(--sice-strong);
+	}
+
+	/* Icon Container */
+
+	.section-arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+ 	img {
+		width: 28px;
+		height: 30px;
+		padding: 18px;
+		background-color: hsl(259, 100%, 65%);
+		border-radius: 50%;
+		position: absolute;
+	}
+
+	img:active {
+		background-color: black;
+	}
+
+	hr {
+		border: 1px solid hsl(0, 0%, 86%);
+		width: 85%;
+ 	}
+
+	/* Year Container */
+
+	.section-age {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		margin-top: 60px;
+		margin-left: 30px;
+		padding-bottom: 30px;
+	}
+
+	.date-text {
+		display: flex;
+		flex-direction: row;
+		margin: -10px;
+		font-family: (var(--type-font));
+		font-style: italic;
+		font-size: 55px;
+		font-weight: var(--sice-strong);
+	}
+
+	.container-section-days {
+		margin-bottom: 25px;
+	}
+ }
+
+ @media only screen and (min-width: 500px){
+
+	/* Main Container */
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container-main {
+		margin: 140px 15px 0 15px;
+		background-color: hsl(0, 0%, 100%);
+		border-radius: 20px 20px 120px 20px;
+		width: 700px;
+	}
+
+
+	/* Date Container */
+
+	.section-date {
+		padding: 40px 15px 0 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content:start;
+		/* mantenerlo dentro del container */
+		flex-wrap: wrap;
+	 }
+
+	 .error-day, .error-month, .error-year{
+		color: red;
+		font-style: italic;
+		font-size: 12px;
+		margin-top: 5px;
+	 }
+
+	 .section-text {
+		font-size: 12px;
+		padding-bottom: 5px;
+		color: hsl(0, 1%, 44%);
+		font-weight: var(--sice-strong);
+	}
+
+	.section-input {
+		padding-right: 30px;
+	}
+
+	.input {
+		border: 1px solid hsl(0, 0%, 86%); 
+		border-radius: 10%;
+		width: 110px;
+		padding: 14px 0 14px 14px;
+		font-size: 20px;
+		font-weight: var(--sice-strong);
+	}
+
+
+	/* Icon Container */
+
+	.section-arrow {
+		margin: 10px 30px 0 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+ 	img {
+		width: 38px;
+		padding: 20px;
+		background-color: hsl(259, 100%, 65%);
+		border-radius: 50%;
+	}
+
+	img:active {
+		background-color: black;
+	}
+
+	hr {
+		border: 1px solid hsl(0, 0%, 86%);
+		width: 88%;
+ 	}
+
+	/* Year Container */
+
+	.section-age {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: star;
+		margin-left: 30px;
+		padding-bottom: 30px;
+	}
+
+	.date-text {
+		display: flex;
+		margin: -10px;
+		flex-direction: row;
+		font-family: (var(--type-font));
+		font-style: italic;
+		font-size: 80px;
+		font-weight: var(--sice-strong);
+	}
+
+	.container-section-days {
+		margin-bottom: 25px;
+	}
+ }
+
+ /* El color de los numeros cambiarlo con javascript */
+
