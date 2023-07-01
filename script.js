@@ -23,7 +23,6 @@ const fechaMes = todayDate.getMonth() + 1;
 const fechaAnio = todayDate.getFullYear();
 
 
-
 year.innerHTML = "- -";
 month.innerHTML = "- -"; 
 days.innerHTML = "- -"; 
@@ -118,17 +117,21 @@ imagen.addEventListener('click', function(){
     }
 
     if (booleanDay && booleanMonth && booleanYear == true) {
+        year.innerHTML = fechaAnio - datoYear;
+
         if (iMonth.value > fechaMes){
-            month.innerHTML = datoMonth - fechaMes;
+            month.innerHTML = 12 - (datoMonth - fechaMes);
+            year.innerHTML = (fechaAnio - datoYear) - 1;
         }else if (iMonth.value <= fechaMes){
-            month.innerHTML = fechaMes - datoMonth;
+            month.innerHTML =  (fechaMes - datoMonth);
+           
         }
         if (iDay.value > fechaDia){
-            days.innerHTML = datoDay - fechaDia;
+            days.innerHTML = 30 - (datoDay - fechaDia);
+            month.innerHTML =  (fechaMes - datoMonth) - 1;
         }else if (iDay.value <= fechaDia){
             days.innerHTML = fechaDia - datoDay;
         }
-        year.innerHTML = fechaAnio - datoYear;
         textDay.style.color = 'hsl(0, 1%, 44%)';
         textMonth.style.color = 'hsl(0, 1%, 44%)';
         textYear.style.color = 'hsl(0, 1%, 44%)';
