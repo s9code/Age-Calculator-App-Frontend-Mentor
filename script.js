@@ -128,7 +128,6 @@ imagen.addEventListener('click', function(){
         }
         if (iDay.value > fechaDia){
             days.innerHTML = 30 - (datoDay - fechaDia);
-            month.innerHTML =  (fechaMes - datoMonth) - 1;
         }else if (iDay.value <= fechaDia){
             days.innerHTML = fechaDia - datoDay;
         }
